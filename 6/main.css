@@ -1,0 +1,22 @@
+/* Стили для заголовка */
+.heading {
+    color: blue;
+    font-size: 24px;
+}
+
+/* Стили для элемента p */
+.text {
+    color: red;
+    font-size: 18px;
+}
+
+/* Стили для блока div */
+.block {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Наследование стилей для элемента с классом text2 */
+.block .text2 {
+    border: inherit;
+}
