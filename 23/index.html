@@ -7,14 +7,52 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-    .task-list {
+        .task-list {
+            list-style: none;
+            counter-reset: task-counter;
+        }
 
-    }
+        .task-list__item {
+            margin-bottom: 10px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            position: relative;
+        }
 
-    .task-list__item {
-        margin-bottom: 10px;
-        padding: 20px;
-    }
+        .task-list__item:nth-child(even) {
+            background-color: #eaeaea;
+        }
+
+        .task-list__item::before {
+            content: counter(task-counter);
+            counter-increment: task-counter;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .list-mark {
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-mark__item {
+            margin-bottom: 10px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .list-mark__item::before {
+            content: url('icon.svg');
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: 10px;
+        }
 
     </style>
 
