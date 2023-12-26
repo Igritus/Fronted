@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 18</title>
     <style>
-        h1,
-        h2,
-        h3,
-        p,
-        ol,
-        ul,
-        body {
-        margin: 0;
+        h1, h2, h3, p, ol, ul, body {
+            margin: 0;
         }
 
         img {
@@ -23,55 +17,86 @@
         *, ::after, ::before {
             box-sizing: border-box;
         }
-        body{
+
+        body {
             font-family: sans-serif;
         }
 
-        .container{
+        .container {
             max-width: 1280px;
             width: 100%;
             margin: 0 auto;
         }
 
-        .page{}
-        .page__level{
+        .page {}
+
+        .page__level {
             margin-bottom: 20px;
         }
 
-        .content{
+        .content {
             padding: 30px;
             font-size: 18px;
             background: red;
         }
-        .example{
+
+        .example {
             padding: 20px;
             background-color: red;
             font-size: 18px;
         }
 
-        .box{
-           /* here */
+        .box {
+            perspective: 1000px;  
         }
 
-        .box__front{
-            /* here */
+        .box__front,
+        .box__back {
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
         }
 
-        .box__back{
-            display: flex;
-            gap: 10px;
-            /* here */
+        .box__column {
+            flex: 1;  
+            position: relative;
+            overflow: hidden;
         }
 
-        .box__column{
-            /* here */
-        }
-
-        .box__column--bg1{
+        .box__column--bg1 {
             background-color: #607D8B;
+        }
+
+        .box__column img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .box__column .content {
+            background: red;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .box__front {
+            transform: rotateY(0deg);
+        }
+
+        .box__back {
+            transform: rotateY(180deg);
+        }
+
+        .box:hover .box__front {
+            transform: rotateY(-180deg);
+        }
+
+        .box:hover .box__back {
+            transform: rotateY(0deg);
         }
 
     </style>
