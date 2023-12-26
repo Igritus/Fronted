@@ -18,7 +18,7 @@
             box-sizing: border-box;
         }
 
-        :root{
+        :root {
             --primary-color: black;
             --secondary-color: white;
             --tertiary-color: #FFEB3B;
@@ -30,62 +30,48 @@
             --tertiary-color: #FF5722;
         }
 
-        body{
-            font-family: sans-serif;
-        }
-
-        .container{
-            max-width: 980px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-        .header{
+        body {
             background-color: var(--primary-color);
             color: var(--secondary-color);
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            padding: 20px 0;
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
 
-        .items2{
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 10px;
+        .header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
-        .item2{
-            border: 1px solid black;
-            display: flex;
-            flex-direction: column;
+
+        .items2 {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
-        .item2__name{
-            margin-bottom: 10px;
-            font-size: 18px;
+
+        .item2__bg {
+            background-color: var(--primary-color);
+            transition: background-color 0.5s ease;
         }
-        .item2__content{
-            margin-bottom: 10px;
-            font-size: 14px;
+
+        .item2__footer {
+            background-color: var(--tertiary-color);
+            color: var(--secondary-color);
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
-        .item2__footer{
-            background-color: black;
-            color: white;
-            padding: 5px;
-            text-align: center;
-        }
-        .item2__bg{
-            background-color: black;
-            height: 150px;
-        }
-        .item2__body{
+
+        .js-switch {
+            background-color: var(--tertiary-color);
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
             padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
         }
-        .item2__date{
-            background-color: #FFEB3B;
-            padding: 3px;
-            display: inline-block;
-            font-size: 13px;
-            color: black;
+
+        .js-switch:hover {
+            background-color: var(--secondary-color);
+            color: var(--tertiary-color);
+            border-color: var(--tertiary-color);
         }
 
     </style>
