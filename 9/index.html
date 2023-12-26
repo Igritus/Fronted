@@ -10,6 +10,38 @@
             font-family: sans-serif;
         }
 
+        ::selection {
+            background-color: #ffcc00; 
+            color: #000;
+        }
+
+       
+        input::placeholder {
+            color: red;
+        }
+
+        .list-links__item:hover {
+            text-decoration: underline;
+            color: red; 
+        }
+
+        .list-links__item:link {
+            color: red; 
+        }
+
+        .list-links__item:visited {
+            color: #c9c9c9; 
+        }
+
+        .list-links__item:active {
+            color: #4CAF50;
+        }
+
+        .table tbody tr:nth-child(odd) {
+            background-color: red;
+        }
+
+
         img {
             max-inline-size: 100%;
             block-size: auto;
@@ -50,7 +82,34 @@
             font-size: 24px;
             text-decoration: none;
         }
+        .grid__media--color1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+        .grid__media--color2::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 255, 0.5); 
+        }
 
+        .grid__media--color3::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
     </style>
 
 </head>
