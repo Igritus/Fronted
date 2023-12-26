@@ -5,22 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 14</title>
     <style>
-        .container{
+        .container {
             max-width: 900px;
             width: 100%;
             margin: 0 auto;
             padding-right: 6px;
             padding-left: 6px;
         }
-        .grid{
+
+        .grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 32px;
         }
-        .grid__item{
+
+        .grid__item {
             background-color: cadetblue;
             font-size: 18px;
             padding: 50px;
+        }
+
+        .grid__item--1 {
+            grid-column: 3; 
+        }
+
+        .grid__item--9 {
+            grid-column: span 3; 
+        }
+
+
+        .grid__item--5 {
+            grid-column: span 2; 
+        }   
+
+        .grid__item--10 {
+            grid-column: 1; 
         }
     </style>
 </head>
