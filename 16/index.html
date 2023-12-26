@@ -8,43 +8,61 @@
         *, ::after, ::before {
             box-sizing: border-box;
         }
-        body{
+
+        body {
             font-family: sans-serif;
             margin: 0;
-        }
-        h1{
+        }   
+
+        h1 {
             margin: 0;
         }
+
         img {
             display: block;
             vertical-align: middle;
             max-width: 100%;
             height: auto;
         }
-        .container{
+
+        .container {
             max-width: 900px;
             width: 100%;
             margin: 0 auto;
             padding: 20px 0;
         }
 
-        .banner{
+        .banner {
             border: 1px solid red;
             padding: 20px;
+            position: relative;
         }
-        .banner__wrapper{
+
+        .banner__wrapper {
             height: 300px;
-        }
-        .banner__img{
-            height: 340px;
+            position: relative;
         }
 
-        .banner__content{
-
+        .banner__img {
+            height: 100%;
+            width: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
         }
-        .banner__media{
 
+        .banner__content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            width: 60%; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            z-index: 1; 
         }
+
     </style>
 </head>
 <body>
