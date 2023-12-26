@@ -5,41 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 17</title>
     <style>
-        body{
+        body {
             font-family: sans-serif;
-        }
-
-        body, h1, h2{
             margin: 0;
         }
 
-        *, ::after, ::before {
+        body,
+        h1,
+        h2 {
+            margin: 0;
+        }
+
+        *,
+        ::after,
+        ::before {
             box-sizing: border-box;
         }
 
-        .container{
+        .container {
             max-width: 900px;
             width: 100%;
             margin: 0 auto;
             padding: 20px 0;
         }
 
-        .header{
+        .header {
             text-align: center;
             background-color: cadetblue;
             padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
         }
 
-
-        .chars-block p{
-            font-size: 20px;
-            margin-bottom: 100px;
+        .chars-block {
+            margin-top: 50px;
+            position: relative;
         }
 
-        .chars-block__header{
+        .chars-block__header {
             padding: 10px;
             background-color: aquamarine;
+            position: sticky;
+            top: 0;
         }
+
+        .chars-block p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chars-block p::first-letter {
+            text-transform: uppercase;
+        }
+
     </style>
 </head>
 <body>
