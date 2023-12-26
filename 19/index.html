@@ -115,6 +115,16 @@
             font-size: 13px;
             color: black;
         }
+        .item:hover .item__footer,
+        .item:hover .item__bg {
+            background-color: red;
+            transition: background-color 0.5s ease;
+        }
+
+        .item:hover {
+            transform: rotate(5deg); 
+            transition: transform 0.5s ease;
+        }
     </style>
 
 
@@ -138,7 +148,11 @@
         .arrow{
             display: inline-flex;
         }
-        .arrow:hover{
+
+        .arrow svg:hover {
+            transform: rotate(180deg);  
+            fill: red; 
+            transition: transform 0.5s ease, fill 0.5s ease;
         }
     </style>
     <div class="container">
@@ -151,13 +165,22 @@
     <h2 class="heading">Задача 3. Облако</h2>
 
     <style>
-        .cloud {
-            /* animation: ..... */
+        @keyframes floatCloud {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
 
-        /* @keyframes названиеАнимации {
+        .cloud img {
+            animation: floatCloud 3s ease-in-out infinite; 
+        }
 
-        } */
     </style>
 
     <div class="container">
@@ -200,6 +223,19 @@
 
         .stacked-card__card--3{
             background-color: yellow;
+        }
+        
+        .stacked-card:nth-child(1) {
+            transform: rotate(10deg); 
+            z-index: 3;
+        }
+        .stacked-card:nth-child(2) {
+            transform: rotate(-5deg);
+            z-index: 2;
+        }
+        .stacked-card:nth-child(3) {
+            transform: rotate(0deg);
+            z-index: 1;
         }
 
     </style>
