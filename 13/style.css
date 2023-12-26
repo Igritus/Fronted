@@ -35,16 +35,35 @@ img {
 }
 
 
-.block{
+.block {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    width: 100%;
 }
+
+.block img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.block div {
+    flex: 1;
+}
+
+.block svg {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
 .col-1 {
     background-color: #e6e6e6;
     border: 1px solid red;
     padding: 4px;
+    flex: 0 0 300px;
 }
 .col-2 {
     background-color: #d5d5d5;
     padding: 4px;
+    flex: 1;
 }
