@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 15</title>
-    <style>
-        .container{
-            max-width: 800px;
-            width: 100%;
-            margin: 0 auto;
-        }
-    </style>
-</head>
-<body class="container">
-
-</body>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Задание 15</title>
+        <style>
+            .container {
+                max-width: 800px;
+                width: 100%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-areas: 
+                    "header header"
+                    "main sidebar"
+                    "footer footer";
+                gap: 10px;
+            }
+    
+            .cell {
+                padding: 20px;
+                border: 1px solid #582f2f;
+            }
+    
+            .header {
+                grid-area: header;
+            }
+    
+            .main {
+                grid-area: main;
+            }
+    
+            .sidebar {
+                grid-area: sidebar;
+            }
+    
+            .footer {
+                grid-area: footer;
+            }
+        </style>
+    </head>
+    <body class="container">
+        <div class="cell header">Header</div>
+        <div class="cell main">Main Content</div>
+        <div class="cell sidebar">Sidebar</div>
+        <div class="cell footer">Footer</div>
+    </body>
+    </html>
